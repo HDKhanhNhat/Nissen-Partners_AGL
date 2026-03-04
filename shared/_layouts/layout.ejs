@@ -1,0 +1,32 @@
+<% url = (typeof BASE_URL != "undefined" ? BASE_URL : "/"); %>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="<%= url %>favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex , nofollow , noarchive">
+    <title>
+      <%= (typeof title != "undefined" ? title : "Page title") %>
+    </title>
+    {{ meta }}
+
+    <link href="<%= url %>assets/js/lib/aos/css/aos.css" rel="stylesheet">
+    <script src="<%= url %>assets/js/lib/aos/aos.js"></script>
+    <link href="<%= url %>assets/js/lib/swiper/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="<%= url %>assets/css/style.css" rel="stylesheet">
+    <script src="<%= url %>assets/js/lib/swiper/swiper-bundle.min.js"></script>
+    {{ head }}
+  </head>
+  <body id="body" class="<%= (typeof title != 'undefined' ? 'page-'+pageid : 'Page id') %>">
+    <%- include(headerPartialPath); -%>
+      <main>
+        {{ content }}
+      </main>
+    <%- include(footerPartialPath); -%>
+
+    {{ script }}
+    <script src="<%= url %>assets/js/jquery-3.7.1.min.js"></script>
+    <script src="<%= url %>assets/js/main.js"></script>
+  </body>
+</html>

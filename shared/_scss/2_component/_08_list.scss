@@ -1,0 +1,61 @@
+/*------------------------------------------------------------
+list
+------------------------------------------------------------*/
+
+.list01{
+
+    &__item{
+        padding: 30px 0;
+        border-bottom: 1px solid #DFE7F0;
+
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+    
+    &__link{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px 15px;
+    }
+
+    &__date{
+        font-weight: 500;
+        letter-spacing: 0.015em;
+    }
+
+    &__cate{
+        min-width: 86px;
+        height: 25px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #E7EBF4;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0 15px;
+        max-width: fit-content;
+    }
+
+    &__title{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        font-weight: 500;
+
+        &::after{
+            content: "";
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #F25F0A url("/assets/img/common/icon/ic_arrow-white.svg") no-repeat center / contain;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    }
+}
