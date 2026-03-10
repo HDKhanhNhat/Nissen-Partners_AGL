@@ -1,0 +1,118 @@
+/*------------------------------------------------------------
+list
+------------------------------------------------------------*/
+
+.list01{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    li{
+        width: 360px;
+
+        @include max-w(1180px){
+            width: calc(50% - 15px);
+        }
+
+        @include sp{
+            width: 100%;
+        }
+
+        .card01{
+            display: block;
+
+            &__img{
+                position: relative;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 15px 0 0 0;
+                }
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .title02{
+                font-size: 2.5rem;
+            }
+
+            .text{
+                font-size: 1.6rem;
+                line-height: calc(23/16);
+            }
+        }
+    }
+
+    &.is-selection{
+        .card01{
+            &__img{
+                &::before{
+                    background: #ffffff url("/assets/img/common/icon/ic_arrow03-orange.svg") no-repeat center / 18px 18px;
+                }
+            }
+        }
+    }
+}
+
+
+.list02{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba($color: #E6E6D3, $alpha: 0.8);
+        font-size: 2.5rem;
+        font-weight: 500;
+        background: #ffffff;
+
+        &.is-active{
+            background: #FFE87B;
+        }
+    }
+}
+
+.list03{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    
+    li{
+        width: calc(50% - 20px);
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        border-bottom: 1px solid #F3EAD2;
+
+        @include sp{
+            width: 100%;
+        }
+
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #E8E0BC;
+            color: #C8BA79;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,227 @@
+/*------------------------------------------------------------
+TOP
+------------------------------------------------------------*/
+
+.top{
+
+    &-mv{
+        position: relative;
+        padding: 20px 0;
+
+        @include max-w(1600px){
+            padding: calc(20/1600*100vw) 0;
+        }
+
+        @include tab{
+            padding: 80px 0 20px;
+        }
+        
+        &__slide{
+            .swiper-slide{
+                height: calc(100vh - 40px);
+                width: auto;
+
+                @include tab{
+                    height: calc(100vh - 100px);
+                    width: calc(100% - 20px);
+                    max-width: 748px;
+                }
+
+                @include sp{
+                    height: auto;
+                }
+                
+                img{
+                    height: 100%;
+                    border-radius: 15px;
+                }
+            }
+        }
+
+        &__content{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+
+            @include max-w(1600px){
+                bottom: calc(10/1600*100vw);
+            }
+
+            @include tab{
+                bottom: 14px;
+            }
+
+            @include sp{
+                bottom: 20px;
+            }
+        }
+
+        &__title{
+            font-size: 12rem;
+            line-height: 1;
+            letter-spacing: 0;
+            color: #FFF600;
+            font-weight: bold;
+
+            @include max-w(1600px){
+                font-size: calc(120/1600*100vw);
+            }
+
+            @include tab{
+                font-size: 6.5rem;
+            }
+
+            @include sp{
+                font-size: calc(28/320*100vw);
+            }
+        }
+
+        &__text{
+            font-size: 7.2rem;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: 0;
+            color: #FFE100;
+
+            @include max-w(1600px){
+                font-size: calc(72/1600*100vw);
+            }
+
+            @include tab{
+                font-size: 4.5rem;
+            }
+            
+            @include sp{
+                font-size: calc(16/320*100vw);
+            }
+        }
+    }
+
+    &-about{
+        padding: 120px 0;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        &__wrap{
+            display: flex;
+            position: relative;
+        }
+
+        &__content{
+            flex: 1;
+            max-width: 760px;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__img{
+            max-width: 540px;
+            position: absolute;
+            top: -60px;
+            right: 0;
+
+            @include sp{
+                top: -30px;
+            }
+        }
+    }
+
+    &-selections{
+        
+        .slide01{
+            margin-left: calc(-1*(100vw - 1140px) / 2);
+            margin-right: calc(-1*(100vw - 1140px) / 2);
+            transform: scaleX(-1);
+
+            @include max-w(1180px){
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+
+            .swiper{
+                max-width: 1180px;
+                padding: 0 20px;
+                margin: 0 auto;
+                overflow: visible;
+            }
+        }
+
+        .card01{
+            transform: scaleX(-1);
+        }
+    }
+
+    &-brand{
+
+        &::after,
+        &::before{
+            display: none;
+        }
+        
+        .slide01{
+            margin-right: calc(-1*(100vw - 1140px) / 2);
+            margin-left: calc(-1*(100vw - 1140px) / 2);
+
+            @include max-w(1180px){
+                margin-right: -20px;
+                margin-left: -20px;
+            }
+        }
+
+        .block01{
+            &__img{
+                max-width: 850px;
+                top: -40px;
+                right: -114px;
+            }
+        }
+    }
+
+    &-special{
+
+        &::before,
+        &::after{
+            border-radius: 0 30px 30px 0;
+        }
+        
+        &::after{
+            left: 0;
+            right: auto;
+        }
+
+        &::before{
+            right: auto;
+            left: -150px;
+        }
+
+        .slide01{
+            margin-left: calc(-1*(100vw - 1140px) / 2);
+            margin-right: calc(-1*(100vw - 1140px) / 2);
+
+            @include max-w(1180px){
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+
+            .swiper{
+                max-width: 1180px;
+                padding: 0 20px;
+                margin: 0 auto;
+                overflow: visible;
+            }
+        }
+
+        .block01{
+            &__img{
+                max-width: 835px;
+                top: -154px;
+                left: -72px;
+            }
+        }
+    }
+}

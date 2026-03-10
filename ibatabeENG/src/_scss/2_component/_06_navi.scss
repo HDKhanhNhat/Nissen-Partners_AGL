@@ -1,0 +1,85 @@
+/*------------------------------------------------------------
+navi
+------------------------------------------------------------*/
+
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        width: 60px;
+        height: 60px;
+        background: #ffffff;
+        border-radius: 50%;
+        border: 1px solid;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        &::before{
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-size: contain;
+        }
+        
+        &::after{
+            display: none;
+        }
+    }
+
+    .swiper-button-prev{
+        transform: rotate(180deg);
+    }
+    
+    &.is-selection{
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            border-color: #E55238;
+        }
+
+        .swiper-button-prev::before,
+        .swiper-button-next::before{
+            background: url('/assets/img/common/icon/ic_arrow03-orange.svg');
+        }
+    }
+
+    &.is-brand{
+        .swiper-button-prev,
+        .swiper-button-next{
+            border-color: #FFD200;
+        }
+
+        .swiper-button-prev::before,
+        .swiper-button-next::before{
+            background: url('/assets/img/common/icon/ic_arrow03-yellow.svg');
+        }
+    }
+
+    &.is-special{
+        .swiper-button-prev,
+        .swiper-button-next{
+            border-color: #AFBD5D;
+        }
+
+        .swiper-button-prev::before,
+        .swiper-button-next::before{
+            background: url('/assets/img/common/icon/ic_arrow03-green.svg');
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/

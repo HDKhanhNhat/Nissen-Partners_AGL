@@ -1,0 +1,200 @@
+/*------------------------------------------------------------
+Footer
+------------------------------------------------------------*/
+
+.ctbox{
+    padding: 0 20px;
+    
+    &__wrap{
+        padding: 120px 0;
+        background: #B17B72;
+        border-radius: 15px;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        .title01{
+            text-align: center;
+            color: #ffffff;
+
+            span{
+                margin-top: 40px;
+
+                @include sp{
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .btn01{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.footer{
+    padding: 80px 0 40px;
+
+    @include sp{
+        padding: 40px 0;
+    }
+
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 60px 30px;
+
+        @include max-w(1180px){
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__logo{
+        display: block;
+        max-width: 250px;
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        
+        @include max-w(890px){
+            gap: calc(30/890*100vw);
+        }
+
+        @include sp{
+            width: 100%;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__list{
+        display: flex;
+        gap: 30px;
+
+        @include max-w(890px){
+            gap: calc(30/890*100vw);
+        }
+
+        @include sp{
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        li{
+
+            @include sp{
+                text-align: center;
+            }
+
+            a{
+                font-weight: 500;
+                white-space: nowrap;
+
+                @include max-w(890px){
+                    font-size: calc(18/890*100vw);
+                }
+
+                @include sp{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    &__contact{
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #B17B72;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        
+        @include max-w(890px){
+            width: calc(60/890*100vw);
+            height: calc(60/890*100vw);
+        }
+
+        @include sp{
+            width: 100%;
+            height: 60px;
+            border-radius: 100px;
+        }
+
+        &::before{
+            content: "";
+            position: relative;
+            display: block;
+            width: 27px;
+            height: 22px;
+            background: url("/assets/img/common/icon/ic_mail.svg") no-repeat center / contain;
+            transition: all 0.3s ease-in-out;
+            
+            @include max-w(890px){
+                width: calc(27/890*100vw);
+                height: calc(22/890*100vw);
+            }
+
+            @include sp{
+                display: none;
+            }
+        }
+
+        @include hover{
+            background: #ffffff;
+            border-color: #B17B72;
+
+            &::before{
+                background: url("/assets/img/common/icon/ic_mail-brown.svg") no-repeat center / contain;
+            }
+        }
+
+        & > span{
+            display: none;
+
+            @include sp{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                font-size: 2.2rem;
+                font-weight: 500;
+                color: #ffffff;
+                letter-spacing: 0;
+                text-transform: uppercase;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    background: url("/assets/img/common/icon/ic_arrow03.svg") no-repeat center / contain;
+                }
+            }
+        }
+    }
+
+    &__copyright{
+        width: 100%;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: calc(35/16);
+    }
+}

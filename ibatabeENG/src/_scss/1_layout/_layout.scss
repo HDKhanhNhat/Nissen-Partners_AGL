@@ -1,0 +1,43 @@
+/* layout
+------------------------------------------------------------*/
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-size: 1.8rem;
+  line-height: calc(35/18);
+  letter-spacing: 0.03em;
+  color: #444444;
+  @include EBGaramond;
+  background: url("/assets/img/common/main_bg.png") no-repeat center / cover;
+
+  &:not(.page-top){
+    .link{
+      border-top: 1px solid #C8BA79;
+    }
+  }
+}
+
+//-------------------------------------------------------
+main {
+  overflow: hidden;
+}
+
+//-------------------------------------------------------
+
+.container {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+//-------------------------------------------------------
+
+a[href^="tel:"] {
+  pointer-events: none;
+
+  @include tab{
+    pointer-events: inherit;
+  }
+}
+
+//-------------------------------------------------------

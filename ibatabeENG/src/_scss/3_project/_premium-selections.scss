@@ -1,0 +1,81 @@
+/*------------------------------------------------------------
+PREMIUM SELECTIONS
+------------------------------------------------------------*/
+
+.premium-selections{
+    
+    &__content{
+        padding: 100px 0 120px;
+
+        @include sp{
+            padding: 40px 0 60px;
+        }
+
+        .container{
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -105px;
+                right: -68px;
+                width: 457px;
+                height: 457px;
+                background: url("/assets/img/top/selections.png") no-repeat center;
+                background-size: contain;
+                mix-blend-mode: multiply;
+                opacity: 0.6;
+                z-index: -1;
+
+                @include max-w(1180px){
+                    width: calc(50% - 30px);
+                    bottom: 0;
+                    right: 20px;
+                }
+
+                @include sp{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 335px;
+                    bottom: auto;
+                    right: auto;
+                }
+            }
+        }
+
+        .text{
+            max-width: 740px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .list01{
+            margin-top: 90px;
+
+            @include sp{
+                margin-top: 45px;
+            }
+        }
+    }
+
+    &__relative{
+        background: #F5F0E2;
+        padding: 120px 0;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        .title01{
+            font-size: 6rem;
+            text-align: center;
+            margin-bottom: 60px;
+
+            @include sp{
+                font-size: 3rem;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

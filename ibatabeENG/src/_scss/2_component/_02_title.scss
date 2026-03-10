@@ -1,0 +1,154 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+
+.title01{
+  font-size: 8rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 45px;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  color: #B17B72;
+
+  @include sp{
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+
+  span{
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
+    margin-top: 14px;
+    letter-spacing: 0;
+  }
+
+  &.is-about{
+    color: #349F87;
+  }
+
+  &.is-selection{
+    color: #E55238;
+
+    span{
+      color: #B17B72;
+    }
+  }
+  
+  &.is-brand{
+    color: #FFD200;
+    
+    span{
+      color: #C8BA79;
+    }
+  }
+
+  &.is-special{
+    color: #AFBD5D;
+    
+    span{
+      color: #B7BE90;
+    }
+  }
+}
+
+/*
+------------------------------------------------------------*/
+
+
+.title02{
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+
+  span{
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0;
+    display: block;
+    margin-top: 20px;
+  }
+
+  &.is-selection{
+    color: #E55238;
+  }
+
+  &.is-brand{
+    color: #FFD200;
+    
+    span{
+      color: #C8BA79;
+    }
+  }
+
+  &.is-special{
+    color: #AFBD5D;
+    
+    span{
+      color: #B7BE90;
+    }
+  }
+}
+
+/*
+------------------------------------------------------------*/
+
+.title03{
+  color: #ffffff;
+  margin-bottom: 40px;
+
+  &__sub{
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 35px;
+    letter-spacing: 0;
+    max-width: fit-content;
+    padding: 10px 0;
+  }
+
+  &__main{
+    display: block;
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 52px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    max-width: fit-content;
+    padding: 10px 0;
+
+    @include sp{
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  &.is-about{
+    color: #349F87;
+  }
+
+  &.is-selection{
+    span{
+      background: #E55238;
+    }
+  }
+  
+  &.is-brand{
+    color: #FFD200;
+    
+    span{
+      color: #C8BA79;
+    }
+  }
+
+  &.is-special{
+    color: #AFBD5D;
+    
+    span{
+      color: #B7BE90;
+    }
+  }
+}

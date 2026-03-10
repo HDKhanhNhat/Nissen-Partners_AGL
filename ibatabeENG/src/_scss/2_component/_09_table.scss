@@ -1,0 +1,42 @@
+/*------------------------------------------------------------
+table
+------------------------------------------------------------*/
+
+.table01{
+    table{
+        width: 100%;
+        border-collapse: collapse;
+
+        td{
+            font-size: 1.7rem;
+            line-height: calc(29/17);
+            padding: 20px 0;
+            border-bottom: 1px solid #EBEBDF;
+            word-break: break-all;
+
+            &:first-child{
+                width: 120px;
+                padding-right: 20px;
+            }
+
+            a[target="_blank"]{
+                text-decoration: underline;
+                word-break: break-all;
+            }
+        }
+    }
+
+    &__label{
+        background: #EBEBDF;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-align: center;
+        border-radius: 5px;
+        width: 100px;
+        display: block;
+    }
+}
+
+/*
+------------------------------------------------------------*/
