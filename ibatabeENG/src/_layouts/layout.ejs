@@ -1,0 +1,37 @@
+<% url = '_demo/ibaraki-shokusai/en/mockup/' %>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex , nofollow , noarchive">
+    <title>
+      <%= (typeof title != "undefined" ? title : "Page title") %>
+    </title>
+    {{ meta }}
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <!-- End -->
+    <link href="/assets/js/lib/aos/css/aos.css" rel="stylesheet">
+    <script src="/assets/js/lib/aos/aos.js"></script>
+    <link href="/assets/js/lib/swiper/css/swiper-bundle.min.css" rel="stylesheet">
+    <script type="module" src="/_scss/style.js"></script>
+    <script src="/assets/js/lib/swiper/swiper-bundle.min.js"></script>
+    {{ head }}
+  </head>
+  <body id="body" class="<%= (typeof title != 'undefined' ? 'page-'+pageid : 'Page id') %>">
+    <%- include('_partials/header'); -%>
+      <main>
+        {{ content }}
+      </main>
+    <%- include('_partials/footer'); -%>
+
+    {{ script }}
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

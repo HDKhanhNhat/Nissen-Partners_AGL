@@ -1,0 +1,145 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+
+.btn01{
+    width: 100%;
+    max-width: 280px;
+    margin-top: 60px;
+
+    @include sp{
+        margin-top: 30px;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        letter-spacing: 0;
+        font-weight: 500;
+        color: #ffffff;
+        border-radius: 100px;
+        height: 60px;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            width: 18px;
+            height: 18px;
+            background: url("/assets/img/common/icon/ic_arrow03.svg") no-repeat center / contain;
+        }
+    }
+
+    &.is-about{
+        a{
+            background: #349F87;
+        }
+    }
+
+    &.is-selection{
+        a{
+            background: #E55238;
+        }
+    }
+
+    &.is-brand{
+        a{
+            background: #FFD200;
+        }
+    }
+
+    &.is-special{
+        a{
+            background: #AFBD5D;
+        }
+    }
+
+    &.is-contact{
+        a{
+            background: #ffffff;
+            color: #B17B72;
+
+            &::after{
+                background: url("/assets/img/common/icon/ic_arrow03-brown.svg") no-repeat center / contain;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+
+.btn02{
+    max-width: 225px;
+    margin: 60px auto 0;
+
+    @include sp{
+        margin-top: 30px;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        gap: 10px;
+        height: 60px;
+        background: #114178;
+        color: #ffffff;
+        border-radius: 5px;
+        padding: 0 20px;
+
+        &::after{
+            content: "";
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #ffffff url("/assets/img/common/icon/ic_arrow.svg") no-repeat center / contain;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+/*
+------------------------------------------------------------*/
+
+.btn03{
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        gap: 10px;
+        height: 100px;
+        background: #ffffff;
+        color: #243D59;
+        border-radius: 5px;
+        padding: 0 20px;
+        font-size: 2.4rem;
+        line-height: 1.3;
+
+        @include max-w(374px){
+            font-size: 1.7rem;
+            height: 60px;
+        }
+
+        &::after{
+            content: "";
+            position: relative;
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: #F25F0A url("/assets/img/common/icon/ic_arrow-white.svg") no-repeat center / contain;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    }
+}

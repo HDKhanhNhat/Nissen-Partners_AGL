@@ -1,0 +1,229 @@
+/*------------------------------------------------------------
+form
+------------------------------------------------------------*/
+
+.form{
+    &__wrap{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    &__title{
+        font-size: 2.4rem;
+        text-align: center;
+        line-height: 1.4;
+        letter-spacing: 0.04em;
+        font-weight: bold;
+        color: #383838;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E9F0F8;
+        margin-bottom: 60px;
+
+        @include sp{
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        padding: 25px 0;
+        border-bottom: 1px solid #CCCCCC;
+
+        &:first-child{
+            border-top: 1px solid #CCCCCC;
+        }
+
+        @include sp{
+            display: block;
+            padding: 20px 0;
+        }
+
+        &.is-required{
+            .form{
+                &__label{
+                    &::after{
+                        content: "必須";
+                        background: #C60010;
+                    }
+                }
+            }
+        }
+    }
+
+    &__label{
+        width: 315px;
+        font-size: 1.7rem;
+        line-height: 1.9;
+        letter-spacing: 0.015em;
+        font-weight: bold;
+        padding: 5px 15px 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: #222;
+
+        @include sp{
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px 0;
+            align-items: center;
+        }
+
+        &::after{
+            content: "任意";
+            display: block;
+            width: 50px;
+            font-size: 1.6rem;
+            line-height: calc(24/16);
+            padding: 2px 0 4px;
+            letter-spacing: 0.04em;
+            font-weight: bold;
+            color: #fff;
+            background: #373737;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+            top: 1px;
+
+            @include sp{
+                top: 0;
+            }
+        }
+    }
+
+    &__content{
+        flex: 1;
+    }
+
+    input,
+    textarea{
+        padding: 0 15px;
+        background: #fff;
+        border: 1px solid #E6E6E6;
+        border-radius: 5px;
+        font-size: 1.7rem;
+        line-height: 1.9;
+        letter-spacing: 0.015em;
+        font-weight: 400;
+        width: calc(100% - 30px);
+        color: #222;
+        outline: none;
+
+        &::placeholder{
+            color: #888888;
+        }
+
+        @include sp{
+            font-size: 1.6rem;
+        }
+    }
+
+    input{
+        min-height: 38px;
+    }
+
+    textarea{
+        min-height: 188px;
+        padding: 10px 15px;
+    }
+
+    &__gr{
+        display: flex;
+        margin: 0 -5px;
+
+        .form__input{
+            width: calc(50% - 15px);
+            margin: 0 5px;
+        }
+    }
+
+    &__note{
+        font-size: 1.6rem;
+        line-height: 1.75;
+        letter-spacing: 0.015em;
+        font-weight: 400;
+        color: #666666;
+        margin-top: 10px;
+    }
+
+    &__policy{
+        margin-top: 60px;
+
+        @include sp{
+            display: block;
+            margin-top: 30px;
+        }
+
+        .form__checkbox{
+            display: block;
+            position: relative;
+            top: 0;
+            padding-left: 35px;
+
+            input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background: #fff;
+            }
+
+            a{
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+        }
+    }
+
+    &__checkbox{
+        display: flex;
+        font-size: 1.7rem;
+        line-height: 1.9;
+        letter-spacing: 0.015em;
+        font-weight: 400;
+        color: #222;
+
+        input{
+            appearance: none;
+            height: 20px;
+            width: 20px;
+            border: 1px solid #CCCCCC;
+            border-radius: 3px;
+            min-height: auto;
+            margin: 6px 15px 0 0;
+            padding: 0;
+            flex-shrink: 0;
+            background: transparent;
+
+            &:checked{
+                background: #222222 url("/assets/img/common/icon/ic_checked.svg") no-repeat center;
+                background-size: 20px 20px;
+                border-color: #222;
+            }
+        }
+    }
+
+    .btn{
+        margin: 60px auto 0;
+        width: 348px;
+        height: 75px;
+        background: rgba($color: #007384, $alpha: 0.73);
+        border-radius: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.66rem;
+        letter-spacing: 0.19em;
+        font-weight: 600;
+        color: #fff;
+
+        @include sp{
+            margin-top: 30px;
+            width: 100%;
+            max-width: 348px;
+        }
+    }
+}
+/*
+------------------------------------------------------------*/

@@ -1,0 +1,82 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+  *zoom: 1;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin sp {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+@mixin max-w($breadpoint) {
+  @media only screen and (max-width: $breadpoint) {
+    @content;
+  }
+}
+
+@mixin min-w($breadpoint) {
+  @media only screen and (min-width: $breadpoint) {
+    @content;
+  }
+}
+
+//============================================
+// hover
+//============================================
+
+@mixin hover {
+  @media only screen and (min-width: 768px) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+//============================================
+// Other
+//============================================
+
+
+@mixin line-clamp($row_number,$height){
+  display: -webkit-box;
+  -webkit-line-clamp: $row_number;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  height: $height;
+  overflow: hidden;
+
+  @include sp{
+    height: auto;
+  }
+}
+

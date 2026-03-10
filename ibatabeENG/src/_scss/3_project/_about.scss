@@ -1,0 +1,65 @@
+/*------------------------------------------------------------
+ABOUT
+------------------------------------------------------------*/
+
+.about{
+
+    &__content{
+        padding: 100px 0 120px;
+
+        @include sp{
+            padding: 40px 0 60px;
+        }
+    }
+
+    &__bl{
+        position: relative;
+    }
+
+    &__text{
+        max-width: 860px;
+        margin: 0 auto;
+    }
+
+    &__img{
+        position: absolute;
+        top: -60px;
+        right: 0;
+        width: 540px;
+        z-index: -1;
+
+        @include sp{
+            top: -30px;
+            width: 100%;
+            max-width: 540px;
+        }
+    }
+
+    &__slide{
+        margin: 90px calc(-1*(100vw - 1140px) / 2) 0;
+
+        @include max-w(1180px){
+            margin: 90px -20px 0;
+        }
+
+        @include sp{
+            margin-top: 45px;
+        }
+
+        &-item{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            img{
+                border-radius: 15px;
+                max-width: 540px;
+
+                @include sp{
+                    width: calc(100vw - 40px);
+                    max-width: 335px;
+                }
+            }
+        }
+    }
+}

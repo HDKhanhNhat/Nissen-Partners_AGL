@@ -1,0 +1,96 @@
+{
+  "infolink": {
+    "main": [
+      {
+        "title": "お知らせ",
+        "url": "/news/"
+      },
+      {
+        "title": "企業情報",
+        "url": "/company/",
+        "submenu": "company",
+        "links": [
+          {
+            "title": "代表挨拶",
+            "url": "#"
+          },
+          {
+            "title": "会社概要",
+            "url": "#"
+          },
+          {
+            "title": "アクセス",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "title": "採用情報",
+        "url": "/recruit/",
+        "submenu": "recruit",
+        "links": [
+          {
+            "title": "募集要項",
+            "url": "#"
+          }
+        ]
+      }
+    ]
+  },
+
+  "mainlink": {
+    "main": [
+      {
+        "title": "ホーム",
+        "url": "/"
+      },
+      {
+        "title": "選ばれる理由 ",
+        "url": "#"
+      },
+      {
+        "title": "セレクトオーダー",
+        "url": "#"
+      },
+      {
+        "title": "在庫一覧 ",
+        "url": "#"
+      },
+      {
+        "title": "サービスメニュー ",
+        "url": "/service/",
+        "submenu": "service",
+        "links": [
+          {
+            "title": "キッチンカー製作",
+            "url": "#"
+          },
+          {
+            "title": "納車までの流れ",
+            "url": "#"
+          },
+          {
+            "title": "修理・点検・メンテンナス",
+            "url": "#"
+          },
+          {
+            "title": "車検",
+            "url": "#"
+          },
+          {
+            "title": "買取・査定",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "title": "納車実績 ",
+        "url": "#"
+      },
+      {
+        "title": "よくある質問 ",
+        "url": "#"
+      }
+    ]
+  }
+}
