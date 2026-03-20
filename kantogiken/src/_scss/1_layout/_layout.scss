@@ -1,0 +1,81 @@
+/* layout
+------------------------------------------------------------*/
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-size: 1.7rem;
+  line-height: 1.95;
+  letter-spacing: 0.03em;
+  color: #243D59;
+  @include Noto;
+  background: #E7EBF4;
+
+  @include sp{
+    padding-bottom: 60px;
+  }
+
+  &:not(.page-top) {
+    .header{
+      &__wrap{
+        background: #114178;
+      }
+
+      &__group{
+        a.is-download{
+          background: #ffffff;
+          color: #114178;
+
+          &::before{
+            background: url("/assets/img/common/icon/ic_page-blue.svg") no-repeat center / contain;
+          }
+        }
+      }
+    }
+    main{
+      padding-top: 90px;
+
+      @include max-w(1600px) {
+        padding-top: calc(90/1600*100vw);
+      }
+
+      @include sp{
+        padding-top: 60px;
+      }
+    }
+
+    .anchor-group{
+      display: none;
+    }
+  }
+}
+
+//-------------------------------------------------------
+main {
+  overflow: hidden;
+}
+
+//-------------------------------------------------------
+
+.container {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container01 {
+  max-width: 1490px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+//-------------------------------------------------------
+
+a[href^="tel:"] {
+  pointer-events: none;
+
+  @include tab{
+    pointer-events: inherit;
+  }
+}
+
+//-------------------------------------------------------

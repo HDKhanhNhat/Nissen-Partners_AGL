@@ -1,0 +1,120 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+
+.title01{
+  margin-bottom: 60px;
+
+  @include sp{
+    margin-bottom: 30px;
+  }
+  
+  &__en{
+    @include Antonio;
+    font-size: 9.6rem;
+    line-height: 70px;
+    font-weight: bold;
+    color: #114178;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.03em;
+
+    @include sp{
+      font-size: 4.8rem;
+      line-height: 36px;
+    }
+  }
+
+  &__jp{
+    font-size: 2.1rem;
+    line-height: 1.3;
+    font-weight: 500;
+    display: block;
+    margin-top: 35px;
+    color: #F25F0A;
+
+    @include sp{
+      font-size: 1.7rem;
+      margin-top: 20px;
+    }
+  }
+
+  &.is-center{
+    text-align: center;
+  }
+
+  &.is-white{
+
+    .title01{
+
+      &__en{
+        text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+      }
+
+      &__jp{
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+/*
+------------------------------------------------------------*/
+
+.title02{
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  font-weight: bold;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #DFE7F0;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include sp{
+    margin-bottom: 30px;
+  }
+
+  &::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #243D59;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &.is-white{
+    border-color: #ffffff;
+  }
+}
+
+/*
+------------------------------------------------------------*/
+
+.title03{
+  font-size: 2.7rem;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  font-weight: bold;
+  color: #114178;
+  padding: 14px 0;
+  
+  @include sp{
+    padding: 0;
+    font-size: 2.4rem;
+  }
+}
+
+/*
+------------------------------------------------------------*/
+
+.title04{
+  font-size: 2.1rem;
+  line-height: 1.3;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

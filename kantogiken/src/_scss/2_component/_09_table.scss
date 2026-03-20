@@ -1,0 +1,61 @@
+/*------------------------------------------------------------
+table
+------------------------------------------------------------*/
+
+.table{
+    max-width: 840px;
+    margin: 0 auto;
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+
+        tr{
+            &:first-child{
+                td{
+                    border-top: 1px solid #DFE7F0;
+
+                    &:nth-child(2){
+                        @include sp{
+                            border-top: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+        td{
+            line-height: 1.95;
+            padding: 30px 10px 30px 30px;
+            border-bottom: 1px solid #DFE7F0;
+            color: #595959;
+
+            @include sp{
+                display: block;
+                padding: 15px 0 !important;
+            }
+
+            &:first-child{
+                width: 220px;
+                padding: 30px 10px;
+                font-weight: 800;
+                color: #807374;
+
+                @include sp{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    &.is-white{
+        table{
+            td{
+                border-color: #ffffff !important;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/

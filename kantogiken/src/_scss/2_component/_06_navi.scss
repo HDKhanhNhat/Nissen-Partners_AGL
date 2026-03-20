@@ -1,0 +1,51 @@
+/*------------------------------------------------------------
+navi
+------------------------------------------------------------*/
+
+.pagenavi{
+    margin-top: 60px;
+
+    @include sp{
+        margin-top: 30px;
+    }
+
+    .wp-pagenavi{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        @include sp{
+            gap: 20px;
+        }
+
+        .pages{
+            @include Antonio;
+            font-size: 2.2rem;
+            line-height: 1;
+            color: #BCC6DD;
+
+            span{
+                color: #114178;
+            }
+        }
+
+        .nextpostslink,
+        .previouspostslink {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #114178 url("/assets/img/common/icon/ic_arrow-white.svg") no-repeat center / contain;
+            margin: 0;
+            flex-shrink: 0;
+
+        }
+
+        .previouspostslink{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/

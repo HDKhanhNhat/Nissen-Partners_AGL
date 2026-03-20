@@ -1,0 +1,39 @@
+/* Breadcrumb
+------------------------------------------------------------*/
+
+.breadcrumb{
+    padding: 0 60px;
+
+    @include sp{
+        padding: 0;
+    }
+
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+        
+        li{
+            a{
+                display: flex;
+                align-items: center;
+                color: #8196AE;
+                text-decoration: none;
+                
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    background: url('/assets/img/common/icon/ic_arrow-gray.svg') no-repeat center / contain;
+                    margin-left: 10px;
+                }
+            }
+            
+            span{
+                color: #243D59;
+            }
+        }
+    }
+}

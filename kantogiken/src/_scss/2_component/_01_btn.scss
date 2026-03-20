@@ -1,0 +1,241 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+
+.js-link-text__wrap {
+    align-items: center;
+    display: inline-block;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.js-link-text__label {
+    display: block;
+    position: relative;
+}
+
+.js-link-text__hover {
+    display: inline-block;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -50%) translateY(100%);
+    width: 100%;
+}
+
+/*
+------------------------------------------------------------*/
+
+.btn01{
+
+    a{
+        display: block;
+        position: relative;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            border-bottom: 1px solid #DFE7F0;
+            transform: scaleX(1);
+            transform-origin: left top;
+            transition: transform .6s cubic-bezier(.37, .16, .12, 1)
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            border-bottom: 1px solid #F25F0A;
+            transform: scaleX(0);
+            transform-origin: right top;
+            transition: transform .3s cubic-bezier(.37, .16, .12, 1);
+        }
+
+        @include hover{
+            &::after{
+                transform: scaleX(1);
+                transform-origin: left top;
+                transition: transform .6s cubic-bezier(.37, .16, .12, 1);
+            }
+
+            &::before{
+                transform: scaleX(0);
+                transform-origin: right top;
+                transition: transform .3s cubic-bezier(.37, .16, .12, 1);
+            }
+
+            & > span{
+                &::after{
+                    will-change: transform;
+                    animation: btn01 0.5s cubic-bezier(.29, .65, .62, 1) forwards;
+                }
+            }
+        }
+
+        & > span{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            gap: 10px;
+            padding: 0 5px 20px;
+
+            &::after{
+                content: "";
+                position: relative;
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: #F25F0A url("/assets/img/common/icon/ic_arrow-general.svg");
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                background-position: center left 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+
+.btn02{
+    max-width: 225px;
+    margin: 60px auto 0;
+
+    @include sp{
+        margin-top: 30px;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        gap: 10px;
+        height: 60px;
+        background: #114178;
+        color: #ffffff;
+        border-radius: 5px;
+        padding: 0 20px;
+
+        &::after{
+            content: "";
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #ffffff url("/assets/img/common/icon/ic_arrow-general.svg");
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: center left 25%;
+            border-radius: 50%;
+        }
+
+        @include hover{
+            opacity: 1;
+            color: rgba($color: #ffffff, $alpha: 0.75);
+
+            &::after{
+                will-change: transform;
+                animation: btn02 0.5s cubic-bezier(.29, .65, .62, 1) forwards;
+            }
+        }
+    }
+
+    &.is-flow{
+        max-width: 314px;
+    }
+
+    &.is-navy{
+        a{
+            background: #EDF2FA;
+            color: #243D59;
+            
+            &::after{
+                background: #F25F0A url("/assets/img/common/icon/ic_arrow-white.svg") no-repeat center / contain;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+
+/*
+------------------------------------------------------------*/
+
+.btn03{
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        gap: 10px;
+        height: 100px;
+        background: #ffffff;
+        color: #243D59;
+        border-radius: 5px;
+        padding: 0 20px;
+        font-size: 2.4rem;
+        line-height: 1.3;
+
+        @include max-w(374px){
+            font-size: 1.7rem;
+            height: 60px;
+        }
+
+        @include hover{
+            opacity: 1;
+            color: rgba($color: #243D59, $alpha: 0.75);
+            
+            &::after{
+                will-change: transform;
+                animation: btn01 0.5s cubic-bezier(.29, .65, .62, 1) forwards;
+            }
+            
+        }
+
+        &::after{
+            content: "";
+            position: relative;
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: #F25F0A url("/assets/img/common/icon/ic_arrow-general.svg");
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: center left 100%;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+@keyframes btn01{
+    0%{
+        background-position: center left 100%;
+    }
+
+    100%{
+        background-position: center left 87.5%;
+    }
+}
+
+@keyframes btn02{
+    0%{
+        background-position: center left 25%;
+    }
+
+    100%{
+        background-position: center left 12.5%;
+    }
+}
